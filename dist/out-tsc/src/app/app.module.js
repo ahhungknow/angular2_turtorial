@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { TurtorialComponent } from './turtorial.component';
+import { FormsModule } from '@angular/forms';
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -12,7 +13,7 @@ var AppModule = /** @class */ (function () {
                 AppComponent, TurtorialComponent
             ],
             imports: [
-                BrowserModule
+                BrowserModule, FormsModule
             ],
             providers: [],
             bootstrap: [AppComponent]
