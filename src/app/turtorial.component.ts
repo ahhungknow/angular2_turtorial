@@ -1,25 +1,23 @@
-import{Component} from '@angular/core';
+import{Component,Input,Output,EventEmitter} from '@angular/core';
 @Component({
     selector:'first',
     template:`
     <h2>{{hello}}</h2>
-    <p [ngClass]="{one:cone,two:ctwo}">This is ngClass apply style</p>
-    <button (click)="toggle()">Change style</button>
-    <p [ngStyle]="{'font-style':style,'font-size':size}">This is paragraph will be apply  to ngStyle</p>
-    `,
-    styles:[`
-    .one{color:red;}
-    .two{background-color:black;}
-    `]
+    <p>Child component {{name}}</p>
+    <button [disabled]="voted" (click)="vote(true)">Agree</button>
+    <button [disabled]="voted" (click)="vote(false)">Disgree</button>
+    Result: {{voted}}`
+    
 })
 export class TurtorialComponent{
-    public hello="Hello ahhungknow - Angular";
-    public cone=true;
-    public ctwo=true;
-    public toggle(){
-        this.cone=!this.cone;
-        this.ctwo=!this.ctwo;
+    @Input()name:string ;
+    @Output()onVote=new EventEmitter<boolean>();
+    public voted:boolean=false;
+    vote(agree:boolean){
+        this.voted=true;
+        this.onVote.emit(agree);
     }
-    public style="italic";
-    public size="30px";
+    SetName(name:string){
+        this.name=name;
+    }
 }

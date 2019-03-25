@@ -7,7 +7,14 @@ var AppComponent = /** @class */ (function () {
     AppComponent = tslib_1.__decorate([
         Component({
             selector: 'app-root',
-            templateUrl: './app.component.html',
+            templateUrl: `
+            <div style="text-align:center">
+            <h1>
+                Welcome to {{ title }}!
+            </h1>
+            <first></first>
+            </div>
+`,
             styleUrls: ['./app.component.css']
         })
     ], AppComponent);
