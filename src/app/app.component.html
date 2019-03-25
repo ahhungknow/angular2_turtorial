@@ -3,10 +3,6 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <p>Agree count:{{agree}} -- Disgree:{{disgree}}</p>
-  <input type="text" #textName (keyup)="0"/>
-  <first *ngFor="let name of names" [name]="name" (onVote)="parentVote($event)"></first>
-  <br>
-  <button (click)="changeName()">Change Name</button>
+  <first></first>
 </div>
 
