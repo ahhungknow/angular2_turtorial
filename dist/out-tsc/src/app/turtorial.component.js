@@ -1,19 +1,24 @@
 import * as tslib_1 from "tslib";
 import { Component } from '@angular/core';
-var FirstComponent = /** @class */ (function () {
-    function FirstComponent() {
+var TurtorialComponent = /** @class */ (function () {
+    function TurtorialComponent() {
+        this.applyClass = false;
         this.hello = "Hello ahhungknow - Angular";
-        this.applyClass = true;
     }
-    FirstComponent = tslib_1.__decorate([
+    TurtorialComponent.prototype.onClick = function () {
+        if (this.applyClass == false)
+            this.applyClass = true;
+        else
+            this.applyClass = false;
+    };
+    TurtorialComponent = tslib_1.__decorate([
         Component({
             selector: 'first',
-            template: "<h2 [class.redColor]=\"applyClass\">{{hello}}</h2>\n              <h1 [class.greenColor]=\"applyClass\">{{hello}}</h1>",
-            styles: [".redColor{\n        color:red;\n    } \n              .greenColor{\n                  color:green;\n              }"
-            ]
+            template: "<h2 [class.redColor]=\"applyClass\">{{hello}}</h2>\n    <button (click)=\"onClick()\">Click me!!</button>",
+            styles: ['.redColor{color:red}']
         })
-    ], FirstComponent);
-    return FirstComponent;
+    ], TurtorialComponent);
+    return TurtorialComponent;
 }());
-export { FirstComponent };
+export { TurtorialComponent };
 //# sourceMappingURL=turtorial.component.js.map

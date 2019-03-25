@@ -2,11 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {FirstComponent} from './turtorial.component';
+import {TurtorialComponent} from './turtorial.component';
 
 @NgModule({
   declarations: [
-    AppComponent,FirstComponent
+    AppComponent,TurtorialComponent
   ],
   imports: [
     BrowserModule

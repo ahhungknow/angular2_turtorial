@@ -2,14 +2,14 @@ import * as tslib_1 from "tslib";
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { FirstComponent } from './turtorial.component';
+import { TurtorialComponent } from './turtorial.component';
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = tslib_1.__decorate([
         NgModule({
             declarations: [
-                AppComponent, FirstComponent
+                AppComponent, TurtorialComponent
             ],
             imports: [
                 BrowserModule
