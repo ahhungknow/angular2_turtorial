@@ -1,8 +1,15 @@
 import{Component} from '@angular/core';
 @Component({
     selector:'first',
-    template:`<h2>Hello ahhungknow - Angular</h2>
-    <h4>Style to Angular 2</h4>`,
-    styles:['h2 {color:red} h4{color:green}' ]
+    template:`<h2>{{hello}}</h2>
+    <img [src]="image"/>
+    <br>
+    <input type="text" [value]="name"/>`,
+    styles:['h2 {color:red}']
 })
-export class FirstComponent{}
+export class FirstComponent{
+    public hello="Hello ahhungknow - You are using one way binding";
+    //property binding
+    public image="http://lorempixel.com/300/300";
+    public name="ahhungknow";
+}
