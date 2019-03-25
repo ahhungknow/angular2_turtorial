@@ -5,12 +5,11 @@ import { AppComponent } from './app.component';
 import {TurtorialComponent} from './turtorial.component';
 
 import{FormsModule} from '@angular/forms'
-import{ExponentialStrengthPipe} from './test.pipe'
-import { from } from 'rxjs';
+
 
 @NgModule({
   declarations: [
-    AppComponent,TurtorialComponent,ExponentialStrengthPipe
+    AppComponent,TurtorialComponent,
   ],
   imports: [
     BrowserModule,FormsModule
