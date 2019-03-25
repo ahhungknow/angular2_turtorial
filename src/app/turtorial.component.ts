@@ -3,20 +3,23 @@ import{Component} from '@angular/core';
     selector:'first',
     template:`
     <h2>{{hello}}</h2>
-    <h3 *ngIf="showLineIf">This is ngIf directive line</h3>
-    <div [ngSwitch]="color">
-        <p *ngSwitchCase="'red'">This line color is red</p>
-        <p *ngSwitchCase="'blue'">This line color is blue</p>
-        <p *ngSwitchCase="'green'">This line color is green</p>
-        <p *ngSwitchDefault>Invalid color</p>
-    </div>
-    <ul>
-        <li *ngFor="let i of colors">{{i}}</li>
-    </ul>`
+    <p [ngClass]="{one:cone,two:ctwo}">This is ngClass apply style</p>
+    <button (click)="toggle()">Change style</button>
+    <p [ngStyle]="{'font-style':style,'font-size':size}">This is paragraph will be apply  to ngStyle</p>
+    `,
+    styles:[`
+    .one{color:red;}
+    .two{background-color:black;}
+    `]
 })
 export class TurtorialComponent{
     public hello="Hello ahhungknow - Angular";
-    public showLineIf=false;
-    public color="blue";
-    public colors:string[] =["red","green","blue"];
+    public cone=true;
+    public ctwo=true;
+    public toggle(){
+        this.cone=!this.cone;
+        this.ctwo=!this.ctwo;
+    }
+    public style="italic";
+    public size="30px";
 }
