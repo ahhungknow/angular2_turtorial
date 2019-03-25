@@ -1,15 +1,17 @@
 import{Component} from '@angular/core';
 @Component({
     selector:'first',
-    template:`<h2>{{hello}}</h2>
-    <img [src]="image"/>
-    <br>
-    <input type="text" [value]="name"/>`,
-    styles:['h2 {color:red}']
+    template:`<h2 [class.redColor]="applyClass">{{hello}}</h2>
+              <h1 [class.greenColor]="applyClass">{{hello}}</h1>`,
+    styles:[`.redColor{
+        color:red;
+    } 
+              .greenColor{
+                  color:green;
+              }`
+              ]
 })
 export class FirstComponent{
-    public hello="Hello ahhungknow - You are using one way binding";
-    //property binding
-    public image="http://lorempixel.com/300/300";
-    public name="ahhungknow";
+    public hello="Hello ahhungknow - Angular";
+    public applyClass=true;
 }
