@@ -2,17 +2,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {TurtorialComponent} from './turtorial.component';
+import {EmployeeListComponent} from './employee.component'
 
-import{FormsModule} from '@angular/forms'
 
 
 @NgModule({
   declarations: [
-    AppComponent,TurtorialComponent,
+    AppComponent,EmployeeListComponent,
   ],
   imports: [
-    BrowserModule,FormsModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
